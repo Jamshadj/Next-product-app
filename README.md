@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Product Application
+
+This is a Next.js application that dynamically displays product details based on the product ID in the URL. The application supports Server-Side Rendering (SSR) to ensure proper HTML source generation and includes Open Graph metadata for rich URL previews on platforms like WhatsApp.
+
+## Features
+
+- **Dynamic Routing:** Display product details based on the product ID in the URL.
+- **Server-Side Rendering (SSR):** Ensures that the HTML source contains the complete product information.
+- **Open Graph Metadata:** Provides rich previews when URLs are shared on social platforms like WhatsApp.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js (>= 14.x)
+- npm or yarn
+
+
+Install dependencies:
+
+npm install
+
+Running the Application
+Start the development server:
+
+Using npm:
 npm run dev
-# or
+Or using yarn:
+Copy code
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open your browser and navigate to:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+http://localhost:3000/product/1
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+app/
+  product/
+    [id]/
+      page.js  # Dynamic route for displaying product details
+lib/
+  api.js      # API functions for fetching product data
+public/
+  favicon.ico # Application favicon
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
